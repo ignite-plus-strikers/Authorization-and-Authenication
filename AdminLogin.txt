@@ -1,0 +1,51 @@
+import React from 'react'
+import '../App.css'
+import ReactDOM from 'react-dom'
+import AdminDashboard from './AdminDashboard'
+
+
+
+class AdminLogin extends React.Component{
+    
+    constructor(){
+        super()
+        this.state = {
+            adminname : "",
+            adminpassword :""
+        }
+        this.handleChange=this.handleChange.bind(this);
+        this.handleChange=this.handleChange.bind(this)
+    }
+
+    handleChange(event) {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+
+    handleAdminLogin(){
+        // if((this.adminname === 'Admin') || (this.adminpassword === 'admin123')){
+            return ReactDOM.render(<AdminDashboard/>,document.getElementById('root'))   
+        // }
+         
+        //  else{
+        //   alert('Invalid!')
+        //  }
+    }
+
+    render(){
+    return(
+        <form className = "loginpage" onSubmit={this.handleAdminLogin}>
+        <h1>Admin Login</h1>
+        <br></br>
+        <h1>Admin Name</h1>
+        <input type = "text" name="adminname" placeholder="Admin name" onChange={this.handleChange}/>
+        <h1>Admin Password</h1>
+        <input type = "password" name="adminpassword" placeholder="Admin Password" onChange={this.handleChange}/><br></br>
+        <input className="PSbutton" type="submit" value="Submit"></input> 
+        </form>
+    )
+}
+}
+
+export default AdminLogin
