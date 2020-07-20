@@ -1,8 +1,0 @@
-.loginpage{
-  align-content: center;
-   margin-left: 500px; 
-   margin-right: 500px;
-  text-align: center;
-  background-color: lightblue;
-
-}
