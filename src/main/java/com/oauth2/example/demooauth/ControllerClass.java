@@ -21,7 +21,7 @@ public class ControllerClass {
     @GetMapping("/admin")
     @ResponseBody
     public String currentAdmin(Authentication authentication) {
-        if (authentication.getName().equals("should have the token")) {
+        if (authentication.getName().equals("Token")) {
             return "Welcome Admin";
         }
        else {
